@@ -146,20 +146,3 @@ python -m unittest discover -s tests -v
 The tests cover configuration validation, malformed OBS status data, monitor
 severity semantics, Slack error handling, and a mocked obs-websocket handshake
 and `GetRecordStatus` exchange.
-
-## Style/maintenance
-
-Version 1.3 was reviewed against the Google Python Style Guide and current
-Python 3.14 documentation while retaining Python 3.10 compatibility. In
-particular, it uses:
-
-- a `main()` entry point and import-safe module behavior;
-- small, typed functions and dataclasses;
-- `pathlib` for paths;
-- narrow exception handling in normal code;
-- broad `Exception` handling only where it re-raises for classification or at
-  the top-level isolation boundary where the exception is logged;
-- validated configuration rather than `max()`-silently-corrected bad inputs;
-- 80-column source formatting aside from unavoidable literal data.
-
-See `STYLE_NOTES.md` for the review summary.
