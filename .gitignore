@@ -1,3 +1,7 @@
+# runtime artifactts
+obs_slack_monitor.log
+config.ini
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
